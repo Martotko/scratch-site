@@ -1,0 +1,49 @@
+@import '../../../variables';
+
+.input-holder {
+  position: relative;
+  padding: 0;
+  padding: 0 0 25px;
+
+  .label-default {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    background: white;
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-normal;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    cursor: text;
+    z-index: 1;
+
+    &.input-default-focus {
+      top: -8px;
+      padding: 0 5px;
+      border: 0.5px solid $color-main;
+      font-size: $font-size-smaller;
+    }
+
+    &.input-default-invisible {
+      z-index: -1;
+    }
+  }
+
+  .input-default {
+    margin: 0;
+    height: 40px;
+    width: 100%;
+    border: 1px solid $color-main;
+    outline: none;
+    padding: 0 0 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $color-black;
+    position: relative;
+
+    &::placeholder {
+      color: $color-black;
+    }
+  }
+}

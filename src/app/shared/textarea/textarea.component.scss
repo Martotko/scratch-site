@@ -1,0 +1,36 @@
+@import '../../../variables';
+
+.textarea-holder {
+  position: relative;
+  width: 100%;
+  padding: 0 0 20px;
+
+  .textarea-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: $color-black;
+    z-index: 1;
+    margin: 0;
+    cursor: text;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: $color-white;
+    font-size: $font-size-normal;
+
+    &.textarea-focus {
+      top: -8px;
+      padding: 0 5px;
+      border: 0.5px solid $color-main;
+      font-size: $font-size-smaller;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    border: 1px solid $color-main;
+    padding: 10px 0 0 10px;
+    outline: none;
+    resize: none;
+  }
+}

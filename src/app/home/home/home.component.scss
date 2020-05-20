@@ -1,0 +1,131 @@
+@import '../../../variables';
+
+@mixin load-background-image($url) {
+  text-align: center;
+  background: url($url) no-repeat center;
+  background-size: contain;
+  height: 150px;
+}
+
+.home-holder {
+  .home-title-holder {
+    background-image: url('../../../assets/images/home-page-img.jpg');
+    background-size: 100% 100%;
+    padding: 0 20%;
+    height: 500px;
+    text-align: center;
+    margin: 0 0 50px;
+
+    @media (max-width: 1024px) {
+      height: 400px;
+      padding: 0 10%;
+    }
+
+    @media (max-width: 767px) {
+      height: 300px;
+    }
+
+    @media (max-width: 500px) {
+      height: 200px;
+    }
+
+    .home-title {
+      color: $color-white;
+      position: relative;
+      top: 25%;
+      margin: 0;
+      transform: translateY(-50%);
+      font-size: 50px;
+      @media (max-width: 1024px) {
+        font-size: $font-size-big;
+      }
+    }
+  }
+
+  .home-section-title {
+    color: $color-black;
+    font-size: $font-size-bigger;
+    text-align: center;
+
+    @media (max-width: 1024px) {
+        font-size: $font-size-big;
+    }
+  }
+
+  .home-services-holder {
+    text-align: center;
+
+    .home-services-column {
+      margin: 20px 0;
+    }
+
+    .home-square-title {
+      font-size: $font-size-big;
+    }
+
+    .home-square-paragraph {
+      margin: 20px 0;
+      font-size: $font-size-normal;
+      color: $color-font-standard;
+    }
+
+    .home-square-web {
+      position: absolute;
+      transform: rotate(-45deg);
+      top: 13px;
+      left: 10px;
+    }
+
+    .home-square-mobile {
+      font-size: 30px;
+      position: absolute;
+      top: 8px;
+      left: 17px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .home-technologies-holder {
+    text-align: center;
+    .home-technologies-angular-logo {
+      @include load-background-image('../../../assets/images/angular.png');
+    }
+    .home-technologies-react-logo {
+      @include load-background-image('../../../assets/images/react-logo.png');
+    }
+    .home-technologies-react-native-logo {
+      @include load-background-image('../../../assets/images/react-native-logo.png');
+    }
+    .home-technologies-web-development-logo {
+      @include load-background-image('../../../assets/images/web-development-logo.png');
+    }
+  }
+
+  .home-team-holder {
+    text-align: center;
+  }
+
+  .home-contact-holder {
+    text-align: center;
+    min-height: 200px;
+
+    .email-link-btn {
+        width: 100%;
+        height: 40px;
+        border-radius: 0;
+        border: 2px solid $color-main;
+        text-decoration: none;
+        font-size: $font-size-normal;
+        margin: 20px 0 10px;
+        padding: 15px;
+        outline: none;
+        background-color: transparent;
+        color: $color-black;
+      
+        &:hover {
+          background-color: $color-main;
+          color: $color-white;
+        }
+      }
+  }
+}

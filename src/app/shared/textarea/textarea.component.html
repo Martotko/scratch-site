@@ -1,0 +1,16 @@
+<div class="textarea-holder">
+    <label class="textarea-label" for="textarea" [ngClass]="{ 'textarea-focus': isOnFocus || value }">{{
+        label
+    }}</label>
+    <textarea
+        name="textarea"
+        id="textarea"
+        cols="20"
+        rows="10"
+        [(ngModel)]="value"
+        (click)="onInputFocus()"
+        (change)="onInputChange()"
+        (blur)="onInputBlur()"
+    ></textarea>
+    <ng-content></ng-content>
+</div>

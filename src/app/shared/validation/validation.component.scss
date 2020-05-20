@@ -1,0 +1,10 @@
+@import '../../../variables';
+@import '../../../mixins';
+
+.validation-holder {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  font-size: $font-size-smaller;
+  color: $color-error;
+}

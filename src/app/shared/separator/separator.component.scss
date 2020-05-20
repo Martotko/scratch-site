@@ -1,0 +1,35 @@
+@import '../../../variables';
+@import '../../../mixins';
+
+.separator-holder {
+  margin: 0 0 20px;
+  width: 100%;
+  text-align: center;
+  @include clearfix();
+  span {
+    position: relative;
+    color: $color-main;
+    padding: 5px 15px;
+    font-size: $font-size-big;
+    &::before {
+      content: '';
+      background-color: #ddd;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      width: 60px;
+      position: absolute;
+    }
+    &::after {
+      content: '';
+      background-color: #ddd;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 60px;
+      position: absolute;
+    }
+  }
+}

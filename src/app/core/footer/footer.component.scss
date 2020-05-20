@@ -1,0 +1,26 @@
+@import '../../../mixins';
+@import '../../../variables';
+
+.footer-holder {
+  min-height: 80px;
+  background-color: $color-black;
+  @include clearfix();
+
+  .copyright {
+    display: inline-block;
+    margin: 8px 0 0;
+    color: $color-font-standard;
+    flex: left;
+  }
+
+  .contact-info {
+    position: relative;
+    display: inline-block;
+    float: right;
+    color: $color-font-standard;
+
+    h5 {
+      margin: 8px 0 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="input-holder">
+    <label for="{{ randomInputId }}" [ngClass]="{ 'input-default-focus': isOnFocus || value }" class="label-default">{{
+        label
+    }}</label>
+    <input
+        [(ngModel)]="value"
+        id="{{ randomInputId }}"
+        (click)="onInputFocus()"
+        (change)="onInputChange()"
+        (blur)="onInputBlur()"
+        class="input-default"
+    />
+    <ng-content></ng-content>
+</div>

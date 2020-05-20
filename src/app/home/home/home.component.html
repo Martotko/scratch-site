@@ -1,0 +1,43 @@
+<div class="home-holder">
+    <div class="home-title-holder">
+        <h1 class="home-title">AT SCRATCH WE LOVE WEB AND MOBILE APPS</h1>
+    </div>
+    <div class="home-services-holder">
+        <h2 class="home-section-title">SCRATCH SERVICES</h2>
+        <app-separator iconType="laptop"></app-separator>
+        <div class="home-services-column col-xs-12 col-sm-6">
+            <app-square-icon><span class="home-square-web">Web</span></app-square-icon>
+            <h2 class="home-square-title">Web Development</h2>
+            <p class="home-square-paragraph">
+                We are using Angular and React to create the rich, complex and functional websites for our clients.
+            </p>
+        </div>
+        <div class="home-services-column col-xs-12 col-sm-6">
+            <app-square-icon><i class="home-square-mobile fa fa-mobile"></i></app-square-icon>
+            <h2 class="home-square-title">Mobile Development</h2>
+            <p class="home-square-paragraph">
+                We use React Native for mobile application on IOS and Android platforms.
+            </p>
+        </div>
+    </div>
+    <div class="home-technologies-holder col-xs-12">
+        <h2 class="home-section-title">TECHNOLOGIES</h2>
+        <app-separator iconType="paper-plane"></app-separator>
+        <div class="home-technologies-angular-logo col-xs-6 col-sm-4"></div>
+        <div class="home-technologies-react-native-logo col-xs-6 col-sm-4"></div>
+        <div class="home-technologies-web-development-logo col-xs-6 col-sm-4"></div>
+        <div class="home-technologies-react-logo col-xs-6 col-sm-4"></div>
+    </div>
+    <div class="home-team-holder col-xs-12">
+        <h2 class="home-section-title">TEAM</h2>
+        <app-separator iconType="user"></app-separator>
+        <div *ngFor="let member of teamMembers" class="col-xs-12 col-sm-6">
+            <app-member-preview [memberInfo]="member"></app-member-preview>
+        </div>
+    </div>
+    <div class="home-contact-holder col-xs-12">
+        <h2 class="home-section-title">LET'S START A PROJECT TOGETHER</h2>
+        <app-separator iconType="envelope"></app-separator>
+        <a href="mailto:m.georgievv@gmail.com" class="email-link-btn">Email Us Here</a>
+    </div>
+</div>
